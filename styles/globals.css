@@ -1,16 +1,61 @@
+@font-face {
+font-family: 'Kollektif Regular';
+font-style: normal;
+font-weight: normal;
+src: local('Kollektif Regular'), url('/fonts/Kollektif.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Kollektif Italic';
+font-style: italic;
+font-weight: normal;
+src: local('Kollektif Italic'), url('/fonts/Kollektif-Italic.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Kollektif Bold';
+font-style: normal;
+font-weight: bold;
+src: local('Kollektif Bold'), url('/fonts/Kollektif-Bold.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Kollektif Bold Italic';
+font-style: italic;
+font-weight: bold;
+src: local('Kollektif Bold Italic'), url('/fonts/Kollektif-BoldItalic.woff') format('woff');
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  color: #eaeaea;
+  font-family: Kollektif Regular, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
-  color: inherit;
   text-decoration: none;
+  text-decoration: none;
+  color: #ff7e00;
+  font-size: 16px;
 }
 
 * {
   box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  margin: 0.2rem 0;
+}
+
+p {
+  font-size: 18px;
+  margin: 0.2rem 0;
+  font-family: Kollektif Regular, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }

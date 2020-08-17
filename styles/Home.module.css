@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #16161e;
 }
 
 .main {
@@ -13,8 +14,217 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.logo {
+  display: flex;
+  position: absolute;
+  height: 8rem;
+  margin: 0 -3rem;
+}
+
+.logoAlt {
+  display: none;
+  height: 10rem;
+  width: 10rem;
+  align-self: center;
+}
+
+.space {
+  margin: 1rem 0;
+}
+
+.heading {
+  font-size: 50px;
+  color: #50cd88;
+  font-weight: bold;
+}
+
+.sub {
+  font-size: 20px;
+  margin: 0.5rem 0;
+}
+
+.par {
+  margin-left: 2em;
+}
+
+.mainstripe {
+  display: flex;
+  width: 100%;
+  background-color: #50cd88;
   align-items: center;
 }
+
+.mainstripe h1 {
+  font-size: 50px;
+  margin: -0.5rem 5rem;
+  margin-bottom: -0.2rem;
+  color: #16161e;
+}
+
+.project {
+  display: flex;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.project img {
+  height: 5rem;
+  display: flex;
+}
+
+.project .left {
+  display: flex;
+  margin: 0 2rem;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project h2 {
+  color: #50cd88;
+  font-size: 25px;
+}
+
+.project p {
+  font-size: 18px;
+}
+
+.table {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-grow: 1;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  margin: 0.5rem 0;
+}
+
+.table .space {
+  flex: 1 0 10px;
+  margin: 0;
+}
+
+.table div {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  align-items: left;
+}
+
+.table h2 {
+  width: 100%;
+  padding: 0.5rem;
+  text-align: center;
+  color: #16161e;
+  background-color: #ff7e00;
+  font-family: Kollektif Bold;
+  font-weight: normal;
+}
+
+.table h3 {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.table .cur {
+  color: #50cd88;
+  margin: 0;
+  font-size: 20px;
+  text-align: center;
+}
+
+.table ul {
+  font-size: 18px;
+  list-style: none;
+  padding: 0;
+  padding-right: 1rem;
+  margin: 1rem 0;
+}
+
+.table li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.table svg {
+  width: 1.5rem;
+  margin-right: 1rem;
+}
+
+.table li p {
+  font-size: 16px;
+  margin-left: 0.5rem;
+  color: #727272;
+}
+
+.table a {
+  font-size: 18px;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.grid div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 2rem;
+}
+
+.grid div .icon {
+  width: 8vh;
+  margin: 0.5rem;
+}
+
+
+@media (max-width: 1000px) {
+
+  .table {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .table div {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main {
+    align-items: center;
+    padding: 0;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .logoAlt {
+    display: flex;
+  }
+
+  .mainstripe {
+    justify-content: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 
 .footer {
   width: 100%;
@@ -71,15 +281,7 @@
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
 
-  max-width: 800px;
-  margin-top: 3rem;
-}
 
 .card {
   margin: 1rem;
@@ -109,10 +311,6 @@
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
 }
 
 @media (max-width: 600px) {
