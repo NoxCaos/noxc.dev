@@ -42,7 +42,13 @@
 
 .sub {
   font-size: 20px;
-  margin: 0.5rem 0;
+  margin-top: 0.5rem;
+}
+
+.subfaded {
+  font-size: 16px;
+  margin: 0;
+  color: #727272;
 }
 
 .par {
@@ -170,6 +176,11 @@
 
 .table .click {
   cursor: pointer;
+  transition: .25s;
+}
+
+.table .click:hover {
+  opacity: .5;
 }
 
 .grid {
@@ -198,7 +209,10 @@
   width: 5vh;
   height: 5vh;
   margin: 0.5rem;
-  filter: sepia(100%);
+}
+
+.grid p {
+  text-align: center;
 }
 
 
@@ -216,9 +230,39 @@
     align-items: center;
   }
 
+  .table ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .table h3 {
+    width: 100%;
+    text-align: center;
+    color: #16161e;
+    background-color: #50cd88;
+  }
+
+  .sub {
+    text-align: center;
+    margin: 0;
+    margin-top: 1rem;
+  }
+
   .main {
     align-items: center;
     padding: 0;
+  }
+
+  .mainlink {
+    text-align: center;
+    width: 100%;
+    display: block;
+  }
+
+  .subfaded {
+    width: 100%;
+    text-align: center;
   }
 
   .logo {
@@ -236,14 +280,16 @@
 
 .footer {
   width: 100%;
-  height: 100px;
+  height: 500px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+  padding: 1rem;
 }
 
 .footer img {
-  margin-left: 0.5rem;
+  display: block;
+  width: 10rem;
 }
 
 .footer a {

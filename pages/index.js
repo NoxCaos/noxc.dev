@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import { useRouter } from 'next/router'
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { 
   faBuffer,
@@ -19,10 +20,8 @@ import {
   faItchIo,
   faDigitalOcean,
   faTrello,
-  faUber,
   faAws,
   faPaypal,
-  faAdobe,
   faPython,
 
 } from '@fortawesome/free-brands-svg-icons'
@@ -49,9 +48,10 @@ export default function Home() {
           <img className={styles.logo} src="https://noxie.sgp1.cdn.digitaloceanspaces.com/web/orange_mint_shadow.png"/>
           <h1 className={styles.heading}>noxc:</h1>
         </div>
-        <div className={styles.left} style={{'padding': '0 5rem'}}>
+        <div style={{'padding': '0 5rem'}}>
           <p className={styles.sub}>gamedev generalist and web developer</p>
-          <a href="mailto:hey@noxc.dev">hey@noxc.dev</a>
+          <p className={styles.subfaded}>(aka NoxCaos, noxie, nox)</p>
+          <a href="mailto:hey@noxc.dev" className={styles.mainlink}>hey@noxc.dev</a>
         </div>
 
         <div className={styles.space}></div>
@@ -87,16 +87,16 @@ export default function Home() {
           <div>
             <h2>software</h2>
             <ul>
-              <li><FontAwesomeIcon icon={faBuffer} />Blender<p>| 1+ years</p></li>
-              <li><FontAwesomeIcon icon={faBuffer} />3D Studio Max<p>| 3+ years</p></li>
+              <li><img src="https://noxie.sgp1.cdn.digitaloceanspaces.com/web/blender-1.svg" />Blender<p>| 1+ years</p></li>
+              <li><img src="https://noxie.sgp1.cdn.digitaloceanspaces.com/web/3ds-max.svg" />3D Studio Max<p>| 3+ years</p></li>
               <li><FontAwesomeIcon icon={faBuffer} />ZBrush<p>| 1+ years</p></li>
               <li><FontAwesomeIcon icon={faBuffer} />Substance Painter<p>| 2+ years</p></li>
-              <li><FontAwesomeIcon icon={faAdobe} />Adobe Photoshop<p>| 4+ years</p></li>
-              <li><FontAwesomeIcon icon={faAdobe} />Adobe Premiere Pro<p>| 6+ years</p></li>
+              <li><img src="https://noxie.sgp1.cdn.digitaloceanspaces.com/web/adobe-photoshop.svg" />Adobe Photoshop<p>| 4+ years</p></li>
+              <li><img src="https://noxie.sgp1.cdn.digitaloceanspaces.com/web/adobe-premiere-pro.svg" />Adobe Premiere Pro<p>| 6+ years</p></li>
             </ul>
             <p className={styles.cur}>currently studying</p>
             <ul>
-              <li><FontAwesomeIcon icon={faBuffer} />Houdini</li>
+              <li><img src="https://noxie.sgp1.cdn.digitaloceanspaces.com/web/houdini.svg" />Houdini</li>
               <li><FontAwesomeIcon icon={faBuffer} />Substance Designer</li>
             </ul>
           </div>
@@ -106,7 +106,7 @@ export default function Home() {
             <ul>
               <li><FontAwesomeIcon icon={faUnity} />Unity Engine<p>| 5+ years</p></li>
               <li><FontAwesomeIcon icon={faNodeJs} />NodeJS<p>| 4+ years</p></li>
-              <li><FontAwesomeIcon icon={faBuffer} />.NET<p>| 4+ years</p></li>
+              <li><img src="https://noxie.sgp1.cdn.digitaloceanspaces.com/web/c-sharp.svg" />.NET<p>| 4+ years</p></li>
               <li><FontAwesomeIcon icon={faReact} />React<p>| 1+ years</p></li>
               <li><FontAwesomeIcon icon={faBuffer} />ENet<p>| 2+ years</p></li>
               <li><FontAwesomeIcon icon={faBuffer} />ReactiveX<p>| 1+ years</p></li>
@@ -116,21 +116,22 @@ export default function Home() {
           <div>
             <h2>languages</h2>
             <ul>
-              <li><FontAwesomeIcon icon={faBuffer} />C#<p>| 7+ years</p></li>
+              <li><img src="https://noxie.sgp1.cdn.digitaloceanspaces.com/web/c-sharp.svg" />C#<p>| 7+ years</p></li>
               <li><FontAwesomeIcon icon={faJs} />JavaScript<p>| 7+ years</p></li>
               <li><FontAwesomeIcon icon={faJava} />Java<p>| 2+ years</p></li>
               <li><FontAwesomeIcon icon={faPython} />Python<p>| 1+ years</p></li>
             </ul>
             <p className={styles.cur}>currently studying</p>
             <ul>
-              <li><FontAwesomeIcon icon={faBuffer} />C/C++</li>
+              <li><img src="https://noxie.sgp1.cdn.digitaloceanspaces.com/web/cpp.svg" />C/C++</li>
               <li><FontAwesomeIcon icon={faBuffer} />Shaderlab</li>
             </ul>
           </div>
         </div>
 
-        <p>for more information and job history please download my <a href="https://cdn.noxc.dev/github/Gleb_Demianenko_resume.pdf">resume</a></p>
-        <p>(currently not looking for opportunities)</p>
+        {
+        //<p>for more information and job history please download my <a href="https://cdn.noxc.dev/github/Gleb_Demianenko_resume.pdf">resume</a></p>
+        }
 
         <div className={styles.space}></div>
         <h1 className={styles.heading}>links</h1>
@@ -158,14 +159,20 @@ export default function Home() {
             <ul>
               <li><FontAwesomeIcon icon={faMugHot} /><a href="https://ko-fi.com/noxcaos">Ko-Fi</a></li>
               <li><FontAwesomeIcon icon={faPatreon} /><a href="https://www.patreon.com/noxcaos">Patreon</a></li>
-              <li className={styles.click}><img src="https://noxie.sgp1.cdn.digitaloceanspaces.com/web/stellar.svg" />Stellar<p>(click to copy)</p></li>
-              <li className={styles.click}><FontAwesomeIcon icon={faBitcoin} />Bitcoin<p>(click to copy)</p></li>
+              <CopyToClipboard text="GDPJDZEIBIDI5RRJR74ROIWUKG3VV23C2MKDAZ5FHRWRHNK32PN6YBPJ">
+                <li className={styles.click}>
+                  <img src="https://noxie.sgp1.cdn.digitaloceanspaces.com/web/stellar.svg" />Stellar<p>(click here to copy)</p>
+                </li>
+              </CopyToClipboard>
+              <CopyToClipboard text="bc1q6mnvxy2vhwm2l5dyddxyezvfnqmgggwwf5ux9vg204sjzcdr0a8q8l8x0r">
+                <li className={styles.click}><FontAwesomeIcon icon={faBitcoin} />Bitcoin<p>(click here to copy)</p></li>
+              </CopyToClipboard>
             </ul>
           </div>
         </div>
 
         <div className={styles.space}></div>
-        <h1 className={styles.heading}>services and apps I use</h1>
+        <h1 className={styles.heading}>technologies I use</h1>
         <div className={styles.grid}>
           <div onClick={() => router.push('https://cloud.digitalocean.com')}>
             <FontAwesomeIcon icon={faDigitalOcean} className={styles.icon} />
@@ -183,9 +190,9 @@ export default function Home() {
             <FontAwesomeIcon icon={faTrello} className={styles.icon} />
             <p>Trello</p>
           </div>
-          <div onClick={() => router.push('https://uber.com/')}>
-            <FontAwesomeIcon icon={faUber} className={styles.icon} />
-            <p>Uber</p>
+          <div onClick={() => router.push('https://ifttt.com/')}>
+            <img src="https://noxie.sgp1.cdn.digitaloceanspaces.com/web/ifttt-vector-logo.svg" className={styles.icon} style={{filter: 'invert(1)'}} />
+            <p>IFTTT</p>
           </div>
           <div onClick={() => router.push('https://aws.amazon.com/s3/')}>
             <FontAwesomeIcon icon={faAws} className={styles.icon} />
@@ -196,18 +203,18 @@ export default function Home() {
             <p>PayPal</p>
           </div>
           <div onClick={() => router.push('https://duckduckgo.com/')}>
-            <FontAwesomeIcon icon={faTrello} className={styles.icon} />
+            <img src="https://noxie.sgp1.cdn.digitaloceanspaces.com/web/duckduckgo.svg" className={styles.icon} style={{filter: 'invert(1)'}} />
             <p>DuckDuckGo</p>
           </div>
           <div onClick={() => router.push('https://www.lastpass.com/')}>
-            <img src="https://noxie.sgp1.cdn.digitaloceanspaces.com/web/lastpass-tile.svg" className={styles.icon} />
+            <img src="https://noxie.sgp1.cdn.digitaloceanspaces.com/web/lastpass.svg" className={styles.icon} />
             <p>LastPass</p>
           </div>
         </div>
       </main>
 
       <footer className={styles.footer}>
-        
+        <p>nothing to see here</p>
       </footer>
     </div>
   )
